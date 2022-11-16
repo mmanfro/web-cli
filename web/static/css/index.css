@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Terminus";
+    src: local("Terminus"),
+        url("../fonts/TerminusTTFWindows-4.49.2.ttf") format("truetype");
+}
+
+* {
+    font-family: monospace;
+}
+
+body {
+    /* background-image: linear-gradient(89deg, #8061c9 37%, #736be9 57%); */
+    background-color: navy;
+    color: whitesmoke;
+    margin: 0;
+}
+
+a {
+    color: whitesmoke;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
+
+#cli {
+    height: 69vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px 80px 20px;
+    background-color: black;
+    border: 1px solid whitesmoke;
+    position: fixed;
+}
+
+#cli #info {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px whitesmoke;
+}
+
+#cli #console {
+    height: 90%;
+    width: 100%;
+}
+
+#cli #console button#auth {
+    background: none;
+    color: whitesmoke;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#cli #console #cmd-last {
+    background: transparent;
+    width: 100%;
+    border: none;
+    color: gold;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+#cli #console #cmd-result {
+    overflow: auto;
+    height: 100%;
+}
+
+#cli #cmd {
+    width: calc(80vw + 20px);
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    position: absolute;
+    bottom: 0;
+}
+
+#dev-info {
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+/**
+* _auth
+*/
+#modal-auth {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    border: 1px solid whitesmoke;
+    padding: 0 20px 20px 20px;
+    background-color: darkslategrey;
+    flex-direction: column;
+}
+
+#modal-auth input {
+    padding: 10px;
+}
+
+#modal-auth #modal-auth-close {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#modal-auth > div {
+    display: flex;
+    width: 180px;
+}
+
+#modal-auth > div > div {
+    width: 100px;
+}
+
+#modal-auth > div > div > input {
+    width: 100%;
+}
+
+#modal-auth > div > button {
+    height: 79px;
+    align-self: flex-end;
+    cursor: pointer;
+    color: darkslategrey;
+    width: 50px;
+    margin-left: 25px;
+}
